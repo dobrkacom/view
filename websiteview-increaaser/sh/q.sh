@@ -4,7 +4,9 @@ input="PROXY-List/http.txt"
 while IFS= read -r line
 do
   chromium-browser --proxy-server="$line" $q 
+  sleep 1;
   chromium-browser --proxy-server="$line" $q1
+sleep 1;
 xdotool key Alt+F4;
 
 done < "$input"
